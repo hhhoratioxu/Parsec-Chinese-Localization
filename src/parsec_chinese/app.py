@@ -282,6 +282,9 @@ class Window(QMainWindow):
         self.set_busy(self.job is not None)
 
     def set_busy(self, busy):
+        for button, kind, key in ((self.detect_button, "detect", "refresh"), (self.read_button, "read", "read"),
+                                  (self.nav_button, "navigate", "navigation"), (self.update_button, "update", "update")):
+            button.setText(self.t("reading") if busy and self.job and self.job.kind == kind else self.t(key))
         self.detect_button.setEnabled(not busy)
         self.update_button.setEnabled(not busy)
         self.open_button.setEnabled(not busy and self.installation.installed and
@@ -290,6 +293,7 @@ class Window(QMainWindow):
         self.read_button.setToolTip("" if self.installation.live_supported else self.t("unsupported_version_error"))
         self.nav_button.setEnabled(not busy and bool(self.snapshot.navigation) and self.installation.live_supported)
         self.nav_picker.setEnabled(not busy and bool(self.snapshot.navigation))
+        self.nav_button.setToolTip("" if self.snapshot.navigation else self.t("live_help"))
 
     def fill_glossary(self):
         rows = self.translations.terms(self.preferences.language, self.search.text())

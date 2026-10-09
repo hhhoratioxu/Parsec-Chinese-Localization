@@ -80,7 +80,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
-          pattern: '*-*-*'
+          pattern: '*'
           path: downloads
       - name: Assemble release files and checksums
         shell: bash

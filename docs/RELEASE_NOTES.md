@@ -1,4 +1,4 @@
-# v0.1.0 · Experimental Chinese companion
+# v0.1.1 · Experimental Chinese companion
 
 **This is a companion, not complete native Parsec localization. Native text replacement: 0%.**
 

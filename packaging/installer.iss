@@ -1,4 +1,4 @@
-#define AppVersion "0.1.0"
+#define AppVersion "0.1.1"
 [Setup]
 AppId={{D9486059-2586-45A3-91C0-680B5E69B6D7}
 AppName=Parsec Chinese Localization
@@ -12,7 +12,7 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0
 OutputDir=..\release
-OutputBaseFilename=ParsecChineseLocalization-0.1.0-windows-x64-setup
+OutputBaseFilename=ParsecChineseLocalization-{#AppVersion}-windows-x64-setup
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern

@@ -1,4 +1,4 @@
-param([string]$Installer = "$PSScriptRoot\..\release\ParsecChineseLocalization-0.1.0-windows-x64-setup.exe")
+param([string]$Installer = "$PSScriptRoot\..\release\ParsecChineseLocalization-0.1.1-windows-x64-setup.exe")
 $ErrorActionPreference = 'Stop'
 $taskInstallRoot = Join-Path $env:TEMP ('pcl-install-test-' + [guid]::NewGuid().ToString('N'))
 # Installer /DIR is isolated. No user installation or Parsec file is used.
