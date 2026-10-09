@@ -2,10 +2,13 @@
 
 Date: 2026-10-09. Local system: Windows 11 build 26200, x64, Python 3.14.
 
-- Initial automated pass after fixing malformed version metadata: 44 passed, 1 skipped. Symlink creation test skipped because the local Windows account cannot create the test link. GUI tests use Qt offscreen mode.
+- Final local automated pass including helper-timeout tests: **47 passed, 1 skipped**. Symlink creation test skipped because the local Windows account cannot create the test link. GUI tests use Qt offscreen mode.
 - Real read-only probe: signed Parsec APP 150-105c, WebView UI 150-33661022248. Host settings page: 27 known titles / 27 observed rows; host name omitted, unknown device/application values omitted. This is not full-app coverage.
-- Actual GUI/native worker and installer/uninstaller checks: in progress; final results will be recorded here before release.
-- Windows local unsigned installer and portable build: initial build succeeded. Further changes require rebuilding before release.
-- macOS arm64/Intel CI: configured; results pending. No real macOS Parsec integration or Gatekeeper acceptance test.
+- Actual Windows GUI: inspected running main window and confirmed version detection, native operation disabled, 0% coverage and Chinese interface. Public page read through GUI worker succeeded. Navigation exposed a UIA provider hang; changed to an on-demand helper with an 18-second timeout and explicit unknown-outcome message.
+- Actual screenshot script captured running Qt companion windows in English/Simplified/Traditional Chinese. Host page screenshots use the real 27-row public snapshot, not fixtures. No native Parsec or personal screenshots are published.
+- Windows install/uninstall: `scripts/verify_installer.ps1` passed a real isolated install, installed GUI smoke test and uninstall. The uninstaller retains existing companion preferences during this test.
+- Windows unsigned installer and portable package build succeeded locally; final rebuild includes isolation changes.
+- [Initial three-platform CI run](https://github.com/hhhoratioxu/Parsec-Chinese-Localization/actions/runs/37914345641): Windows x64, macOS arm64 and macOS x86_64 all passed **45 tests with zero skips**; bundled app startup and actual package checks also passed. Windows install/uninstall passed; both macOS DMGs were verified, mounted, and their app smoke tests passed. This run predates the three additional isolation tests; the tag pipeline will validate those before publishing.
+- macOS packages use CI Python 3.12. No real macOS Parsec integration, macOS installation detector or Gatekeeper acceptance test.
 
 Unverified: complete native localization, Windows 10 hardware, macOS real client integration, stream/connection overlays, login/register localization and streaming performance. No synthetic test is counted as a real client integration result.

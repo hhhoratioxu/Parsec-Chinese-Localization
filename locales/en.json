@@ -55,6 +55,7 @@
   "ui.cleanup_help": "Removes only this companion's preferences and event log. Parsec is untouched. Close the app before uninstalling.",
   "ui.error": "Operation could not be completed",
   "ui.generic_error": "The operation failed. No success has been recorded. Check permissions and try again.",
+  "ui.provider_timeout_error": "Parsec's accessibility provider did not respond in time. Navigation may have occurred; read the current page again to confirm. Only the companion helper was stopped.",
   "ui.open_parsec_error": "Open exactly one official Parsec window first.",
   "ui.unsupported_ui_error": "The Parsec interface version or structure is unverified. Live operations are refused.",
   "ui.unsupported_version_error": "Live reading requires signed Parsec 150-105c on Windows. The offline glossary remains available.",

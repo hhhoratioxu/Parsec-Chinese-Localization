@@ -6,6 +6,7 @@
 - 160 bilingual glossary entries with provenance metadata.
 - On-demand read-only public settings mirror for signed Windows Parsec 150-105c and UI 150-33661022248.
 - Explicit official-app page navigation; no connection, authentication or setting-value automation.
+- Live UIA calls use an on-demand isolated helper with an 18-second timeout; a stalled provider cannot trap the companion window. Timeout means the navigation outcome is unconfirmed and must be reread.
 - Backed up, atomic companion preferences; restore companion English and cleanup.
 - Windows x64 installer and portable package. macOS arm64 and Intel DMGs provide the companion and glossary; live AX integration is unavailable.
 

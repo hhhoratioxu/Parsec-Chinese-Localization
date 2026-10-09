@@ -1,152 +1,152 @@
 {
   "term.000": {
     "category": "Login",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.001": {
     "category": "Login",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.002": {
     "category": "Login",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.003": {
     "category": "Login",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.004": {
     "category": "Login",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.005": {
     "category": "Login",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.006": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.007": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.008": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.009": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.010": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.011": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.012": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.013": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.014": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.015": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.016": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.017": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.018": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.019": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.020": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.021": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.022": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.023": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.024": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.025": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.026": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.027": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.028": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.029": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.030": {
@@ -156,132 +156,132 @@
   },
   "term.031": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.032": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.033": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.034": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.035": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.036": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.037": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.038": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.039": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.040": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.041": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.042": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.043": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.044": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.045": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.046": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.047": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.048": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.049": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.050": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.051": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.052": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.053": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.054": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.055": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.056": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.057": {
@@ -291,137 +291,137 @@
   },
   "term.058": {
     "category": "General",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.059": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.060": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.061": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.062": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.063": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.064": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.065": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.066": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.067": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.068": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.069": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.070": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.071": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.072": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.073": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "official-navigation-docs",
     "native_replacement": false
   },
   "term.074": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.075": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.076": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.077": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.078": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.079": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.080": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.081": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.082": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.083": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.084": {
     "category": "Client",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.085": {
@@ -451,7 +451,7 @@
   },
   "term.090": {
     "category": "Host",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.091": {
@@ -496,7 +496,7 @@
   },
   "term.099": {
     "category": "Host",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.100": {
@@ -576,12 +576,12 @@
   },
   "term.115": {
     "category": "Host",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.116": {
     "category": "Host",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.117": {
@@ -591,212 +591,212 @@
   },
   "term.118": {
     "category": "Host",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "official-navigation-docs",
     "native_replacement": false
   },
   "term.119": {
     "category": "Host",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "official-navigation-docs",
     "native_replacement": false
   },
   "term.120": {
     "category": "Host",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.121": {
     "category": "Host",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.122": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.123": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.124": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.125": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.126": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.127": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.128": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.129": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.130": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.131": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.132": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.133": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.134": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.135": {
     "category": "Network",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.136": {
     "category": "Hotkeys",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.137": {
     "category": "Hotkeys",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.138": {
     "category": "Hotkeys",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.139": {
     "category": "Hotkeys",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.140": {
     "category": "Hotkeys",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.141": {
     "category": "Hotkeys",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.142": {
     "category": "Hotkeys",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.143": {
     "category": "Hotkeys",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.144": {
     "category": "Hotkeys",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.145": {
     "category": "Gamepad",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.146": {
     "category": "Gamepad",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.147": {
     "category": "Gamepad",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.148": {
     "category": "Friends",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.149": {
     "category": "Friends",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "official-navigation-docs",
     "native_replacement": false
   },
   "term.150": {
     "category": "Friends",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.151": {
     "category": "Friends",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.152": {
     "category": "Friends",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.153": {
     "category": "Friends",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.154": {
     "category": "Help",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.155": {
     "category": "Help",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.156": {
     "category": "Help",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.157": {
     "category": "Help",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   },
   "term.158": {
     "category": "Help",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "embedded-dll-150-105c",
     "native_replacement": false
   },
   "term.159": {
     "category": "Help",
-    "source": "dll-150-105c-or-official-docs",
+    "source": "reference-vocabulary",
     "native_replacement": false
   }
 }

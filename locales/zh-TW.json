@@ -55,6 +55,7 @@
   "ui.cleanup_help": "僅刪除本工具的偏好設定與事件記錄，不影響 Parsec。解除安裝前請關閉本工具。",
   "ui.error": "操作未完成",
   "ui.generic_error": "操作失敗，未記錄為成功。請檢查權限後重試。",
+  "ui.provider_timeout_error": "Parsec 的輔助使用介面未及時回應。導覽可能已執行，請重新讀取目前頁面確認；僅停止了本工具的輔助處理程序。",
   "ui.open_parsec_error": "請先開啟且僅保留一個官方 Parsec 視窗。",
   "ui.unsupported_ui_error": "Parsec 介面版本或結構尚未驗證，已拒絕即時操作。",
   "ui.unsupported_version_error": "即時讀取需要 Windows 上已簽章的 Parsec 150-105c；離線術語仍可使用。",

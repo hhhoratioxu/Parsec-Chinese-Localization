@@ -55,6 +55,7 @@
   "ui.cleanup_help": "仅删除本工具的偏好设置与事件日志，不影响 Parsec。卸载前请关闭本工具。",
   "ui.error": "操作未完成",
   "ui.generic_error": "操作失败，未记录为成功。请检查权限后重试。",
+  "ui.provider_timeout_error": "Parsec 的辅助功能接口未及时响应。导航可能已执行，请重新读取当前页面确认；仅停止了本工具的辅助进程。",
   "ui.open_parsec_error": "请先打开且仅保留一个官方 Parsec 窗口。",
   "ui.unsupported_ui_error": "Parsec 界面版本或结构未验证，已拒绝实时操作。",
   "ui.unsupported_version_error": "实时读取需要 Windows 上已签名的 Parsec 150-105c；离线术语仍可使用。",

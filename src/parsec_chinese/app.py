@@ -13,6 +13,7 @@ from .translations import Translations
 from .state import StateStore, Preferences
 from .detection import detect, launch, Installation
 from .bridge import WindowsBridge, BridgeError, Snapshot
+from .isolated_bridge import IsolatedBridge, worker
 from .updates import latest_release
 
 
@@ -25,20 +26,12 @@ class Job(QThread):
         self.kind, self.function = kind, function
 
     def run(self):
-        com = None
         try:
-            if sys.platform == "win32" and self.kind in ("read", "navigate"):
-                import pythoncom
-                pythoncom.CoInitializeEx(pythoncom.COINIT_MULTITHREADED)
-                com = pythoncom
             self.done.emit((self.kind, self.function()))
         except BridgeError as exc:
             self.failed.emit(str(exc))
         except Exception:
             self.failed.emit("generic")  # Never forward paths, UI text or server responses.
-        finally:
-            if com is not None:
-                com.CoUninitialize()
 
 
 class Window(QMainWindow):
@@ -303,7 +296,8 @@ class Window(QMainWindow):
         self.glossary_table.setRowCount(len(rows))
         for r, values in enumerate(rows):
             for c, value in enumerate(values):
-                self.glossary_table.setItem(r, c, QTableWidgetItem(value))
+                translated = self.translations.term("Log in" if value == "Login" else value, self.preferences.language) if c == 2 else value
+                self.glossary_table.setItem(r, c, QTableWidgetItem(translated))
         self.glossary_table.resizeRowsToContents()
         self.dictionary_count.setText(self.t("dictionary_count", count=len(self.translations.catalog)))
 
@@ -321,7 +315,7 @@ class Window(QMainWindow):
         for label in self.snapshot.navigation:
             self.nav_picker.addItem(self.translations.term(label, self.preferences.language), label)
         self.live_status.setText(self.t("read_coverage", translated=self.snapshot.translated, observed=self.snapshot.observed, version=self.snapshot.ui_version)
-                                 if self.snapshot.ui_version else self.t("no_rows"))
+                                 if self.snapshot.ui_version and self.snapshot.observed else self.t("no_rows"))
         self.set_busy(self.job is not None)
 
     def set_language(self, language):
@@ -414,6 +408,7 @@ class Window(QMainWindow):
         self.safe_log("operation_failed")
         self.message({"open_parsec": "open_parsec_error", "unsupported_version": "unsupported_version_error",
                       "unsupported_ui": "unsupported_ui_error", "navigation_unavailable": "navigation_error",
+                      "provider_timeout": "provider_timeout_error",
                       "navigation_refused": "navigation_error"}.get(code, "generic_error"))
 
     def job_finished(self):
@@ -432,12 +427,12 @@ class Window(QMainWindow):
 
     def read_current(self):
         if self.installation.live_supported:
-            self.run_job("read", lambda: WindowsBridge(self.installation, self.translations).read())
+            self.run_job("read", lambda: IsolatedBridge(self.installation, self.translations).read())
 
     def navigate(self):
         label = self.nav_picker.currentData()
         if label:
-            self.run_job("navigate", lambda: WindowsBridge(self.installation, self.translations).navigate(label))
+            self.run_job("navigate", lambda: IsolatedBridge(self.installation, self.translations).navigate(label))
 
     def search_terms(self):
         self.pages.setCurrentIndex(2)
@@ -486,7 +481,12 @@ def main(argv=None):
     parser.add_argument("--smoke-test", action="store_true", help="Run a GUI startup check without reading Parsec")
     parser.add_argument("--probe", action="store_true", help="Print a sanitized, read-only public settings snapshot")
     parser.add_argument("--reset", action="store_true", help="Remove only companion preferences and logs")
+    parser.add_argument("--bridge-worker", choices=("read", "navigate"), help=argparse.SUPPRESS)
+    parser.add_argument("--bridge-output", help=argparse.SUPPRESS)
+    parser.add_argument("--label", default="", help=argparse.SUPPRESS)
     args = parser.parse_args(argv)
+    if args.bridge_worker:
+        return worker(args.bridge_worker, args.bridge_output or "", args.label)
     if args.reset:
         StateStore().clear()
         return 0

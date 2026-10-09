@@ -59,6 +59,7 @@ cleanup|Reset companion preferences|清理工具偏好设置|清除工具偏好�
 cleanup_help|Removes only this companion's preferences and event log. Parsec is untouched. Close the app before uninstalling.|仅删除本工具的偏好设置与事件日志，不影响 Parsec。卸载前请关闭本工具。|僅刪除本工具的偏好設定與事件記錄，不影響 Parsec。解除安裝前請關閉本工具。
 error|Operation could not be completed|操作未完成|操作未完成
 generic_error|The operation failed. No success has been recorded. Check permissions and try again.|操作失败，未记录为成功。请检查权限后重试。|操作失敗，未記錄為成功。請檢查權限後重試。
+provider_timeout_error|Parsec's accessibility provider did not respond in time. Navigation may have occurred; read the current page again to confirm. Only the companion helper was stopped.|Parsec 的辅助功能接口未及时响应。导航可能已执行，请重新读取当前页面确认；仅停止了本工具的辅助进程。|Parsec 的輔助使用介面未及時回應。導覽可能已執行，請重新讀取目前頁面確認；僅停止了本工具的輔助處理程序。
 open_parsec_error|Open exactly one official Parsec window first.|请先打开且仅保留一个官方 Parsec 窗口。|請先開啟且僅保留一個官方 Parsec 視窗。
 unsupported_ui_error|The Parsec interface version or structure is unverified. Live operations are refused.|Parsec 界面版本或结构未验证，已拒绝实时操作。|Parsec 介面版本或結構尚未驗證，已拒絕即時操作。
 unsupported_version_error|Live reading requires signed Parsec 150-105c on Windows. The offline glossary remains available.|实时读取需要 Windows 上已签名的 Parsec 150-105c；离线术语仍可使用。|即時讀取需要 Windows 上已簽章的 Parsec 150-105c；離線術語仍可使用。
@@ -242,6 +243,10 @@ OBSERVED = set("Hosting Enabled|Host Name|Resolution|Orientation|Bandwidth Limit
 def main():
     root = Path(__file__).resolve().parents[1] / "locales"
     root.mkdir(exist_ok=True)
+    reviewed = {}
+    if (root / "catalog.json").is_file() and (root / "en.json").is_file():
+        previous = json.loads((root / "en.json").read_text(encoding="utf-8"))
+        reviewed = {previous[k]: v["source"] for k, v in json.loads((root / "catalog.json").read_text(encoding="utf-8")).items()}
     resources = {lang: {} for lang in ("en", "zh-CN", "zh-TW")}
     catalog = {}
     for line in UI.strip().splitlines():
@@ -255,7 +260,7 @@ def main():
             raise ValueError(f"Duplicate English label: {english}")
         for lang, value in zip(resources, (english, cn, tw), strict=True):
             resources[lang][key] = value
-        catalog[key] = {"category": category, "source": "observed-ui-150-105c" if english in OBSERVED else "dll-150-105c-or-official-docs", "native_replacement": False}
+        catalog[key] = {"category": category, "source": reviewed.get(english, "observed-ui-150-105c" if english in OBSERVED else "reference-vocabulary"), "native_replacement": False}
     for lang, values in resources.items():
         (root / f"{lang}.json").write_text(json.dumps(values, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (root / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
