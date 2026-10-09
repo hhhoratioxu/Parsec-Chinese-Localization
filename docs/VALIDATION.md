@@ -14,4 +14,14 @@ Date: 2026-10-09. Local system: Windows 11 build 26200, x64, Python 3.14.
 - [v0.1.0 pipeline](https://github.com/hhhoratioxu/Parsec-Chinese-Localization/actions/runs/37915140219): all three build jobs passed; the release job failed because its download pattern selected test artifacts instead of application artifacts. No v0.1.0 release was published. Corrected the artifact selection for v0.1.1; its final release pipeline is pending.
 - [v0.1.1 pipeline](https://github.com/hhhoratioxu/Parsec-Chinese-Localization/actions/runs/37915527942): all build and release jobs passed, with 48 tests per platform. The release was returned to draft after live navigation checks; it is not the delivery version. v0.1.2 is the delivery candidate with navigation disabled and helper-pipe cleanup fixed.
 
+## Published v0.1.2 verification
+
+- [Final pipeline](https://github.com/hhhoratioxu/Parsec-Chinese-Localization/actions/runs/37916836031): all Windows x64, macOS arm64, macOS x86_64 build/test jobs and the release job **succeeded**. Each platform's JUnit report contains **53 tests, 0 failures, 0 errors, 0 skips**.
+- Windows real installer/startup/uninstall and both macOS DMG verification/mount/startup checks passed in that pipeline.
+- [Release v0.1.2](https://github.com/hhhoratioxu/Parsec-Chinese-Localization/releases/tag/v0.1.2) contains six actual attachments: Windows installer, portable ZIP, two macOS DMGs, source ZIP and SHA256SUMS.txt.
+- Downloaded all five package/source attachments and checked every SHA256 against the release manifest: all matched. Anonymous GitHub API returned HTTP 200, `draft=false`, six assets and `prerelease=true`.
+- Downloaded Windows portable executable started successfully on the local Windows machine. Its bundled helper read **17/17 real Client page headings** with the new grouped-field reader. This tests the published executable, not only source code.
+- Downloaded Windows installer Authenticode status: **NotSigned**. No Developer ID / notarization claim is made for macOS.
+- The tagged source archive reflects checks pending when the tag was created. This repository validation record and the linked completed pipeline provide the final observed results without rewriting the released tag.
+
 Unverified: complete native localization, Windows 10 hardware, macOS real client integration, stream/connection overlays, login/register localization and streaming performance. No synthetic test is counted as a real client integration result.
