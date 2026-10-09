@@ -11,7 +11,7 @@ from parsec_chinese.detection import Installation, active_version
 
 def test_dictionary_complete():
     t = Translations()
-    assert len(t.catalog) == 160
+    assert len(t.catalog) == 165
     assert t.term("Computers", "zh-CN") == "计算机"
     assert t.term("Computers", "zh-TW") == "電腦"
     assert all(v["native_replacement"] is False for v in t.catalog.values())

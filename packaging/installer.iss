@@ -1,4 +1,4 @@
-#define AppVersion "0.1.1"
+#define AppVersion "0.1.2"
 [Setup]
 AppId={{D9486059-2586-45A3-91C0-680B5E69B6D7}
 AppName=Parsec Chinese Localization

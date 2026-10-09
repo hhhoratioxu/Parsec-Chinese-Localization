@@ -1,9 +1,16 @@
 # Changelog
 
+## 0.1.2 — 2026-10-09
+
+- Disabled automatic navigation after real official-provider completion failures; users switch official pages manually.
+- Removed helper output pipes so inherited handles cannot trap timeout cleanup.
+- Added verified Client grouped-field reads and five observed bilingual labels, bringing the glossary to 165 entries.
+- Experimental release with a read-only settings mirror and bilingual glossary; native replacement remains 0%.
+
 ## 0.1.1 — 2026-10-09
 
 - Corrected the release artifact selection so both Windows and macOS packages are included.
-- First published experimental release; native text replacement remains unavailable.
+- Release candidate returned to draft after live navigation checks exposed unreliable provider completion.
 
 ## 0.1.0 — 2026-10-09
 

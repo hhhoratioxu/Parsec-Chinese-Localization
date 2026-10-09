@@ -1,3 +1,3 @@
 """Third-party companion; never patches Parsec's proprietary files."""
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 REPOSITORY = "https://github.com/hhhoratioxu/Parsec-Chinese-Localization"

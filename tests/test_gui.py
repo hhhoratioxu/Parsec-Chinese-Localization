@@ -27,6 +27,15 @@ def test_no_native_success_claims(window):
     assert not window.patch_button.isEnabled()
     assert "0%" in window.stats["coverage"][1].text()
     assert not window.read_button.isEnabled()
+    assert not window.nav_button.isEnabled()
+
+
+def test_navigation_remains_disabled_after_read(window):
+    window.snapshot = Snapshot((SettingRow("Decoder", "Hardware"),), ("Client",), 1, 1, "test")
+    window.fill_snapshot()
+    assert not window.nav_button.isEnabled()
+    assert not window.nav_picker.isEnabled()
+    assert "Invoke" in window.nav_button.toolTip()
 
 
 def test_click_language_and_restore(window):

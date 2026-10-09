@@ -71,6 +71,7 @@ shortcut|Use Ctrl+F to search the glossary; Alt+F4 or Command+Q closes the app.|
 experimental|Experimental companion · v{version}|实验性辅助工具 · v{version}|實驗性輔助工具 · v{version}
 loading|Detecting…|正在检测…|正在偵測…
 navigation|Navigate official app|导航官方应用|導覽官方應用程式
+navigation_unavailable_note|Automatic page navigation is disabled: the official accessibility provider did not reliably complete Invoke calls. Switch pages manually in Parsec, then read again.|自动页面导航已禁用：官方辅助功能接口无法可靠完成 Invoke 调用。请在 Parsec 中手动切页后重新读取。|自動頁面導覽已停用：官方輔助使用介面無法可靠完成 Invoke 呼叫。請在 Parsec 中手動切換頁面後重新讀取。
 settings_note|Values are a snapshot, not a continuous monitor. Read again after changing an official setting.|参数为读取时的快照，不会持续监控。调整官方设置后请重新读取。|參數為讀取當下的快照，不會持續監控。調整官方設定後請重新讀取。
 """
 
@@ -236,9 +237,15 @@ Help|Support Ticket|支持工单|支援服務單
 Help|Start Free Trial|开始免费试用|開始免費試用
 Help|Install WebView2|安装 WebView2|安裝 WebView2
 Help|Re-authenticate|重新验证身份|重新驗證身分
+Client|HID Compatibility Options|HID 兼容性选项|HID 相容性選項
+Client|Yubikey Passthrough|YubiKey 直通|YubiKey 直通
+Client|Yubikey Selection|YubiKey 选择|YubiKey 選擇
+Client|Camera Passthrough|摄像头直通|攝影機直通
+Client|Camera Selection|摄像头选择|攝影機選擇
 """
 
 OBSERVED = set("Hosting Enabled|Host Name|Resolution|Orientation|Bandwidth Limit|Lock Desktop|Kick All Guests On Owner Disconnect|Virtual Displays (Beta)|Privacy Mode|Fallback To Virtual Display|Block Daisy-Chaining/Multi-Hop|FPS|Constant FPS|Idle Kick Timer|Exclusive Input Mode|Display|Audio|Echo Cancelling|Echo Selection|Virtual Microphone|Virtual Tablet (Beta)|Parsec Virtual USB Gamepads (Beta)|Virtual Gamepad Type|Virtual Mouse|Virtual Yubikey|Virtual Camera|Quality|Use Client Resolution|Owner-Only|Lowest Latency|Default (Automatic Selection)".split("|"))
+OBSERVED.update("HID Compatibility Options|Yubikey Passthrough|Yubikey Selection|Camera Passthrough|Camera Selection".split("|"))
 
 def main():
     root = Path(__file__).resolve().parents[1] / "locales"

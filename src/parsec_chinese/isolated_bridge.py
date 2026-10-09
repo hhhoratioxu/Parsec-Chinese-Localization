@@ -27,7 +27,10 @@ class IsolatedBridge:
                 command += ["--label", label]
             kwargs = {"creationflags": subprocess.CREATE_NO_WINDOW} if sys.platform == "win32" else {}
             try:
-                subprocess.run(command, capture_output=True, timeout=self.timeout, check=True, **kwargs)
+                # No stdout pipes: COM-spawned descendants can retain inherited pipe
+                # handles and otherwise trap communicate() even after a timeout.
+                subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                               timeout=self.timeout, check=True, **kwargs)
                 if not output.is_file() or output.stat().st_size > 65536:
                     raise BridgeError("unsupported_ui")
                 result = json.loads(output.read_text(encoding="utf-8"))

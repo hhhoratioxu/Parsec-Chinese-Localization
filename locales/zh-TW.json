@@ -67,6 +67,7 @@
   "ui.experimental": "實驗性輔助工具 · v{version}",
   "ui.loading": "正在偵測…",
   "ui.navigation": "導覽官方應用程式",
+  "ui.navigation_unavailable_note": "自動頁面導覽已停用：官方輔助使用介面無法可靠完成 Invoke 呼叫。請在 Parsec 中手動切換頁面後重新讀取。",
   "ui.settings_note": "參數為讀取當下的快照，不會持續監控。調整官方設定後請重新讀取。",
   "term.000": "登入",
   "term.001": "註冊",
@@ -227,5 +228,10 @@
   "term.156": "支援服務單",
   "term.157": "開始免費試用",
   "term.158": "安裝 WebView2",
-  "term.159": "重新驗證身分"
+  "term.159": "重新驗證身分",
+  "term.160": "HID 相容性選項",
+  "term.161": "YubiKey 直通",
+  "term.162": "YubiKey 選擇",
+  "term.163": "攝影機直通",
+  "term.164": "攝影機選擇"
 }

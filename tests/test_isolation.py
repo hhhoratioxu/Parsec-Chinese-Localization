@@ -1,4 +1,6 @@
 import subprocess
+import sys
+import time
 import pytest
 from parsec_chinese.isolated_bridge import IsolatedBridge, worker
 from parsec_chinese.detection import Installation
@@ -12,6 +14,8 @@ def test_provider_timeout_bounded(tmp_path, monkeypatch):
     bridge = IsolatedBridge(Installation(exe,"150-105c",True,"win32"), Translations(), timeout=0.1)
     def stall(command, **kwargs):
         assert kwargs["timeout"] == 0.1
+        assert kwargs["stdout"] is subprocess.DEVNULL
+        assert "capture_output" not in kwargs
         raise subprocess.TimeoutExpired(command, 0.1)
     monkeypatch.setattr(subprocess, "run", stall)
     with pytest.raises(BridgeError, match="provider_timeout"):
@@ -30,3 +34,17 @@ def test_unknown_version_does_not_start_helper(monkeypatch):
     monkeypatch.setattr(subprocess, "run", forbidden)
     with pytest.raises(BridgeError, match="unsupported_version"):
         IsolatedBridge(Installation(), Translations()).read()
+
+
+def test_real_stalled_helper_is_terminated(tmp_path, monkeypatch):
+    exe = tmp_path / "parsecd.exe"
+    exe.touch()
+    bridge = IsolatedBridge(Installation(exe, "150-105c", True, "win32"), Translations(), timeout=0.15)
+    original = subprocess.run
+    def delayed(command, **kwargs):
+        return original([sys.executable, "-c", "import time; time.sleep(30)"], **kwargs)
+    monkeypatch.setattr(subprocess, "run", delayed)
+    started = time.monotonic()
+    with pytest.raises(BridgeError, match="provider_timeout"):
+        bridge.read()
+    assert time.monotonic() - started < 5

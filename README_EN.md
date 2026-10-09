@@ -7,10 +7,10 @@ This independent project targets [Parsec Remote Desktop](https://parsec.app), no
 ## Features and compatibility
 
 - GUI with Simplified Chinese, Traditional Chinese, English, system fonts and light/dark themes.
-- 160 searchable bilingual glossary entries, placeholder validation and provenance metadata.
+- 165 searchable bilingual glossary entries, placeholder validation and provenance metadata.
 - Installation/version detection and Windows Authenticode verification.
 - On-demand read-only mirror of public settings headings/values on **Windows APP 150-105c / UI 150-33661022248 only**.
-- Allowlisted official-page navigation. Settings changes, connections and authentication stay in the official application.
+- Automatic page navigation is disabled because the official accessibility provider did not reliably complete Invoke calls. Switch pages and change settings in the official application.
 - Atomic backed-up companion preferences, English restoration and cleanup. No Parsec files are written.
 - GitHub release checks only on click; event logs contain fixed names only.
 
@@ -20,7 +20,7 @@ Windows x64 installers and portable packages are built. macOS arm64/Intel DMGs p
 
 Install the official Parsec client separately. Download an actual attachment from [Releases](https://github.com/hhhoratioxu/Parsec-Chinese-Localization/releases), verify SHA256SUMS.txt, then install the Windows EXE or keep the entire extracted portable directory. On macOS drag the app from its DMG to Applications. Follow normal OS workflows for unsigned software or build from source; do not disable security.
 
-Select a companion language and search the glossary. On the known Windows version, open exactly one non-minimized Parsec window at a settings tab and click **Current settings → Read current page**. The snapshot is not continuously monitored. Choose an available navigation target to move to an official page and read again. No setting-value controls are mirrored as editable controls.
+Select a companion language and search the glossary. On the known Windows version, open exactly one non-minimized Parsec window at a settings tab and click **Current settings → Read current page**. The snapshot is not continuously monitored. Switch pages manually in Parsec and read again; the automatic navigation button is disabled with an explanation. No setting-value controls are mirrored as editable controls.
 
 ## Actual screenshots
 

@@ -67,6 +67,7 @@
   "ui.experimental": "Experimental companion · v{version}",
   "ui.loading": "Detecting…",
   "ui.navigation": "Navigate official app",
+  "ui.navigation_unavailable_note": "Automatic page navigation is disabled: the official accessibility provider did not reliably complete Invoke calls. Switch pages manually in Parsec, then read again.",
   "ui.settings_note": "Values are a snapshot, not a continuous monitor. Read again after changing an official setting.",
   "term.000": "Log in",
   "term.001": "Sign up",
@@ -227,5 +228,10 @@
   "term.156": "Support Ticket",
   "term.157": "Start Free Trial",
   "term.158": "Install WebView2",
-  "term.159": "Re-authenticate"
+  "term.159": "Re-authenticate",
+  "term.160": "HID Compatibility Options",
+  "term.161": "Yubikey Passthrough",
+  "term.162": "Yubikey Selection",
+  "term.163": "Camera Passthrough",
+  "term.164": "Camera Selection"
 }

@@ -67,6 +67,7 @@
   "ui.experimental": "实验性辅助工具 · v{version}",
   "ui.loading": "正在检测…",
   "ui.navigation": "导航官方应用",
+  "ui.navigation_unavailable_note": "自动页面导航已禁用：官方辅助功能接口无法可靠完成 Invoke 调用。请在 Parsec 中手动切页后重新读取。",
   "ui.settings_note": "参数为读取时的快照，不会持续监控。调整官方设置后请重新读取。",
   "term.000": "登录",
   "term.001": "注册",
@@ -227,5 +228,10 @@
   "term.156": "支持工单",
   "term.157": "开始免费试用",
   "term.158": "安装 WebView2",
-  "term.159": "重新验证身份"
+  "term.159": "重新验证身份",
+  "term.160": "HID 兼容性选项",
+  "term.161": "YubiKey 直通",
+  "term.162": "YubiKey 选择",
+  "term.163": "摄像头直通",
+  "term.164": "摄像头选择"
 }

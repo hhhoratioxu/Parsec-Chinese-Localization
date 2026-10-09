@@ -251,6 +251,7 @@ class Window(QMainWindow):
             getattr(self, name).setText(self.t(key))
         for label, key in ((self.notice, "notice"), (self.patch_reason, "patch_reason"), (self.live_help, "live_help"), (self.settings_note, "settings_note")):
             label.setText(self.t(key))
+        self.settings_note.setText(self.t("navigation_unavailable_note") + "\n" + self.t("settings_note"))
         self.patch_button.setToolTip(self.t("patch_reason"))
         self.language_picker.blockSignals(True)
         self.language_picker.setCurrentIndex(self.language_picker.findData(self.preferences.language))
@@ -291,9 +292,11 @@ class Window(QMainWindow):
                                     (self.installation.signature_valid or self.installation.platform == "darwin"))
         self.read_button.setEnabled(not busy and self.installation.live_supported)
         self.read_button.setToolTip("" if self.installation.live_supported else self.t("unsupported_version_error"))
-        self.nav_button.setEnabled(not busy and bool(self.snapshot.navigation) and self.installation.live_supported)
-        self.nav_picker.setEnabled(not busy and bool(self.snapshot.navigation))
-        self.nav_button.setToolTip("" if self.snapshot.navigation else self.t("live_help"))
+        # Real integration checks found unreliable Invoke completion. Do not
+        # expose an action that may change a page without a confirmed outcome.
+        self.nav_button.setEnabled(False)
+        self.nav_picker.setEnabled(False)
+        self.nav_button.setToolTip(self.t("navigation_unavailable_note"))
 
     def fill_glossary(self):
         rows = self.translations.terms(self.preferences.language, self.search.text())
@@ -434,9 +437,7 @@ class Window(QMainWindow):
             self.run_job("read", lambda: IsolatedBridge(self.installation, self.translations).read())
 
     def navigate(self):
-        label = self.nav_picker.currentData()
-        if label:
-            self.run_job("navigate", lambda: IsolatedBridge(self.installation, self.translations).navigate(label))
+        self.message("navigation_unavailable_note")
 
     def search_terms(self):
         self.pages.setCurrentIndex(2)

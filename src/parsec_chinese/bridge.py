@@ -79,40 +79,47 @@ class WindowsBridge:
         navigation = tuple(n for n in sorted(NAVIGATION) if any(b.element_info.name == n and b.is_enabled() for b in buttons))
         rows = {}
         observed = 0
-        # Read actual table rows only, not the username header, footer or host list.
-        for table in window.descendants(control_type="Table"):
-            for row in table.children():
-                cells = row.children()
-                if len(cells) != 2:
+        # Host uses a table; Client uses grouped fields. Both expose ARIA
+        # headings with a uniquely labelled control in a nearby container.
+        for heading in window.descendants():
+            try:
+                if heading.element_info.element.CurrentAriaRole != "heading":
                     continue
-                headings = cells[0].descendants()
-                # Names may be arbitrary; keep only exact known public labels.
-                labels = [h.element_info.name for h in headings
-                          if h.element_info.name.casefold() in self.translations.lookup]
-                observed += 1
-                if not labels:
-                    continue
-                label = labels[0]
-                controls = [c for c in cells[1].descendants()
+            except Exception:
+                continue
+            label = heading.element_info.name
+            scope = heading
+            controls = []
+            for _ in range(3):
+                scope = scope.parent()
+                if scope is None:
+                    break
+                controls = [c for c in scope.descendants()
                             if c.element_info.control_type in ("ComboBox", "CheckBox", "Button", "Spinner", "Edit")
                             and c.element_info.name == label]
-                value = ""
-                enabled = True
-                if controls and label not in PRIVATE_LABELS:
-                    control = controls[0]
-                    enabled = control.is_enabled()
-                    try:
-                        kind = control.element_info.control_type
-                        if kind == "ComboBox":
-                            value = safe_value(control.iface_value.CurrentValue, self.translations)
-                        elif kind in ("CheckBox", "Button"):
-                            value = {0: "Off", 1: "On", 2: "Mixed"}.get(control.iface_toggle.CurrentToggleState, "")
-                        elif kind == "Spinner":
-                            value = safe_value(control.iface_range_value.CurrentValue, self.translations)
-                        # Edit boxes are deliberately never read, even if labelled.
-                    except Exception:
-                        value = ""
-                rows[label] = SettingRow(label, value, enabled)
+                if len(controls) == 1:
+                    break
+            if len(controls) != 1:
+                continue
+            observed += 1
+            if label.casefold() not in self.translations.lookup:
+                continue
+            control = controls[0]
+            value = ""
+            enabled = control.is_enabled()
+            if label not in PRIVATE_LABELS:
+                try:
+                    kind = control.element_info.control_type
+                    if kind == "ComboBox":
+                        value = safe_value(control.iface_value.CurrentValue, self.translations)
+                    elif kind in ("CheckBox", "Button"):
+                        value = {0: "Off", 1: "On", 2: "Mixed"}.get(control.iface_toggle.CurrentToggleState, "")
+                    elif kind == "Spinner":
+                        value = safe_value(control.iface_range_value.CurrentValue, self.translations)
+                    # Edit boxes are deliberately never read, even if labelled.
+                except Exception:
+                    value = ""
+            rows[label] = SettingRow(label, value, enabled)
         return Snapshot(tuple(rows.values()), navigation, observed, len(rows), KNOWN_UI)
 
     def navigate(self, label):

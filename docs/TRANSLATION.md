@@ -8,4 +8,4 @@ Use professional terminology: CN 计算机／客户端／分辨率／带宽／�
 
 The validator rejects duplicate JSON keys, empty text, mismatched key sets and inconsistent `{name}`, printf and shortcut placeholders. Update English and both Chinese files together, including provenance. `scripts/seed_locales.py` can regenerate the seed dictionary; reviewed JSON is what ships.
 
-Live coverage denominator is the number of observed two-cell settings rows. Numerator is the number with a known title. Private/unknown values are omitted regardless of title translation. The native replacement percentage remains zero.
+Live coverage denominator is the number of observed ARIA headings with a uniquely labelled control in a nearby container. Numerator is the number with a known title. Sections, unmatched headings and private/unknown values are omitted; this is not a count of every visible text. The native replacement percentage remains zero.

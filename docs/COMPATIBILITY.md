@@ -6,7 +6,7 @@
 | Install/version detection | Real local detection of 150-105c; portable running executable recognized | Bundle ID/Info.plist detection; real Parsec installation untested |
 | Signature check | Authenticode issuer and validity checked | Live integration unavailable; no signature compatibility claim |
 | Public settings reads | APP 150-105c and UI 150-33661022248 only; WebView2 | Not implemented; disabled |
-| Official-page navigation | Exact allowlisted buttons, fresh process/UI check | Not implemented; disabled |
+| Official-page navigation | Disabled after real Invoke completion failures; manual navigation in official app | Not implemented; disabled |
 | Native text replacement | 0%; disabled | 0%; disabled |
 | Signed distribution | No certificate | No Developer ID / notarization |
 
