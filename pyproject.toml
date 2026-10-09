@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parsec-chinese-localization"
+version = "0.1.0"
+description = "Non-invasive Chinese companion for Parsec Remote Desktop"
+readme = "README_EN.md"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = ["PySide6-Essentials==6.12.0", "psutil==7.2.2", "pefile==2024.8.26; sys_platform == 'win32'", "pywinauto==0.6.9; sys_platform == 'win32'"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "pyinstaller==6.22.3"]
+
+[project.gui-scripts]
+parsec-chinese = "parsec_chinese.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.data-files]
+locales = ["locales/en.json", "locales/zh-CN.json", "locales/zh-TW.json", "locales/catalog.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
